@@ -1,3 +1,7 @@
+<?php session_start();
+if (!array_key_exists('user', $_COOKIE))
+    header("Location: registration.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,22 +14,23 @@
 <body>
 <?php
 
-if (!$_COOKIE['user'])
-    header("Location: registration.php");
 
-$user = [];
-if(($file = fopen('layuots/DB.csv', 'r')) !==false ) {
-    while(($data = fgetcsv($file, 1000, ';')) !==false){
-        if ($_COOKIE['user'] == $data[1]){
-            $user = $data;
+
+
+    $user = [];
+    if (($file = fopen('layuots/DB.csv', 'r')) !== false) {
+        while (($data = fgetcsv($file, 1000, ';')) !== false) {
+            if (isset($_COOKIE['user']) && $_COOKIE['user'] == $data[1]) {
+                $user = $data;
+            }
         }
     }
-}
 
-echo "<h4>ФИО: " . $user[0] . "</h4>";
-echo "<h4>LOGIN: " . $user[1] . "</h4>";
+    echo "<h4>ФИО: " . $_SESSION['name'] . "</h4>";
+    echo "<h4>LOGIN: " . $_SESSION['login'] . "</h4>";
 
-echo "<a href='layuots/exit.php'>Нажмите для выхода</a>";
+    echo "<a href='layuots/exit.php'>Нажмите для выхода</a>";
+
     ?>
 
 
