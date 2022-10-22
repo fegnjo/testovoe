@@ -31,7 +31,7 @@
             event.preventDefault();
 
             $.ajax({
-                url: "layuots/newUser.php",
+                url: "layuots/SingUp.php",
                 method: 'POST',
                 data: $(this).serialize(),
                 success: function(result) {
