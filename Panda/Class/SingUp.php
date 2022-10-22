@@ -1,6 +1,6 @@
 <?php
 
-class Main
+class SingUp
 {
     public $name;
     public $password;
