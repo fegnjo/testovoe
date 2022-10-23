@@ -15,10 +15,8 @@
 <div class="container">
     <h1>Регистрация</h1>
     <form class="form-group">
-        <input type="text" class="form-control" name="name" placeholder="Введите ФИО"><br>
         <input type="text" class="form-control" name="login" placeholder="Введите логин"><br>
         <input type="password" class="form-control" name="password" placeholder="Введите пароль"><br>
-        <input type="password" class="form-control" name="password_confirm" placeholder="Подвердите Ваш пароль"><br>
         <input class="btn btn-primary" type="submit" id="button" value="Зарегистрироваться">
     </form>
     <a href="auth.php">Уже зарегистрированы?</a>
