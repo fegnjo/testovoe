@@ -1,3 +1,2 @@
 1) SELECT DISTINCT mountain_name, group_name, mountain_id, date FROM `groups` INNER JOIN `mountains` ORDER BY `date` DESC, `mountain_name` ASC;
 2)
-
