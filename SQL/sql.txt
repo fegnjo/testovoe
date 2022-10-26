@@ -1,2 +1,4 @@
 1) SELECT DISTINCT mountain_name, group_name, mountain_id, date FROM `groups` INNER JOIN `mountains` ORDER BY `date` DESC, `mountain_name` ASC;
-2)
+2) INSERT INTO `mountains` (`mountain_name`, `country`, `height`, `region`) VALUES ('Чо-Ойю', 'Непал', 8188, 'Гималаи');
+3) SELECT name, group_id, date FROM `groups` INNER JOIN `mountaineers` WHERE date BETWEEN '2022-10-27' AND '2022-10-28';
+
