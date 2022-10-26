@@ -4,5 +4,6 @@ h1 {
 
 #button {
     position: relative;
-    left: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }

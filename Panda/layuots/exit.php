@@ -1,3 +1,5 @@
 <?php
-setcookie('user', $checkLogin['name'], time() - 3600 * 24 * 360, "/");
+session_start();
+
+session_destroy();
 header("Location: ../auth.php");
