@@ -1,7 +1,8 @@
-1) SELECT DISTINCT mountain_name, group_name, mountain_id, date FROM `groups` INNER JOIN `mountains` ORDER BY `date` DESC, `mountain_name` ASC;
+1) SELECT DISTINCT mountain_id, group_name, date FROM `groups` ORDER BY `date` ASC;
 2) INSERT INTO `mountains` (`mountain_name`, `country`, `height`, `region`) VALUES ('Чо-Ойю', 'Непал', 8188, 'Гималаи');
-3) SELECT name, montaineer_id, date  FROM `groups` JOIN mountaineers ON id = montaineer_id WHERE DATE BETWEEN '2022-10-27' AND '2022-10-29' GROUP BY name;
-4) INSERT INTO `groups` (`group_id`, `date`, `group_name`, `mountain_id`, `montaineer_id`) VALUES (NULL, '2022-10-31', 'Котельнич', '4', '13');
-5) SELECT `montaineer_id`, `mountain_id`, COUNT(*) FROM `groups` GROUP BY `montaineer_id`, `mountain_id` ORDER BY `montaineer_id` DESC;
+3) SELECT mountaineer_id, date FROM `groups` WHERE date BETWEEN '2022-10-27' AND '2022-10-31' ORDER BY `date` DESC;
+4) INSERT INTO `groups` (`group_id`, `date`, `group_name`, `mountain_id`, `mountaineer_id`) VALUES (NULL, '2022-10-31', 'Котельнич', '4', '13');
+5) SELECT `mountaineer_id`, `mountain_id`, COUNT(*) FROM `groups` GROUP BY `mountaineer_id`, `mountain_id` ORDER BY `mountaineer_id` DESC;
 6) SELECT group_name, date  FROM `groups` WHERE DATE = '2022-10-31' GROUP BY group_name;
-
+7) INSERT INTO `groups` (`date`, `group_name`, `mountain_id`, `mountaineer_id`) VALUES('2022-11-01', 'Новая группа', 5, 4);
+8) SELECT `mountain_id`, COUNT(*) FROM `groups` GROUP BY `mountain_id` ORDER BY COUNT(*) DESC;
