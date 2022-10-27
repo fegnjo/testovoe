@@ -3,5 +3,5 @@
 3) SELECT name, montaineer_id, date  FROM `groups` JOIN mountaineers ON id = montaineer_id WHERE DATE BETWEEN '2022-10-27' AND '2022-10-29' GROUP BY name;
 4) INSERT INTO `groups` (`group_id`, `date`, `group_name`, `mountain_id`, `montaineer_id`) VALUES (NULL, '2022-10-31', 'Котельнич', '4', '13');
 5) SELECT `montaineer_id`, `mountain_id`, COUNT(*) FROM `groups` GROUP BY `montaineer_id`, `mountain_id` ORDER BY `montaineer_id` DESC;
-6)
+6) SELECT group_name, date  FROM `groups` WHERE DATE = '2022-10-31' GROUP BY group_name;
 
